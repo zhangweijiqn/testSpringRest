@@ -1,0 +1,30 @@
+<assembly>
+	<id>assembly</id>
+	<formats>
+		<format>zip</format>
+	</formats>
+	<includeBaseDirectory>false</includeBaseDirectory>
+	<fileSets>
+		<fileSet>
+			<directory>src/main/resources/${package.environment}/</directory>
+			<outputDirectory>conf</outputDirectory>		
+			<includes>
+                <include>*.xml</include>
+                <include>*.properties</include>       
+			    <include>*.json</include>    			
+      		</includes>
+			<fileMode>0644</fileMode>
+		</fileSet>
+		<fileSet>
+			<directory>src/main/assembly/bin</directory>
+			<outputDirectory>bin</outputDirectory>
+			<fileMode>0755</fileMode>
+			<directoryMode>0755</directoryMode>
+		</fileSet>
+	</fileSets>
+	<dependencySets>
+		<dependencySet>
+			<outputDirectory>lib</outputDirectory>
+		</dependencySet>
+	</dependencySets>
+</assembly>

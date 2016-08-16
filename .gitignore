@@ -1,0 +1,8 @@
+*target*
+*idea*
+*out*
+*lib*
+src/main/resources/*.jar
+*.iml
+logs*
+*rec.log*
